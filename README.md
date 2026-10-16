@@ -1,54 +1,146 @@
-![风绘云盘动态封面](assets/readme-cover.svg)
+<p align="center">
+  <img src="assets/readme-cover.svg" width="100%" alt="风绘云盘动态封面：角色轻轻浮动并自然眨眼" />
+</p>
 
-# 风绘云盘 · 品牌素材工作区
+<h1 align="center">风绘云盘 · 品牌素材库</h1>
 
-封面源文件为 `assets/readme-cover.svg`，使用自包含 SVG 和 CSS 动画，角色每 6 秒自然眨眼一次，外框为直角矩形，支持减少动态效果设置。运行 `npm run build` 会一并更新封面；不需要外部图片服务。
+<p align="center">
+  以青绿色双马尾角色与云朵为视觉核心，整理 Logo、站点图标和宣传素材。
+</p>
 
-## 常用入口
+<p align="center">
+  <code>SVG · PNG · ICO</code>&nbsp;&nbsp;
+  <code>透明背景</code>&nbsp;&nbsp;
+  <code>16–1024 px</code>
+</p>
 
-- 最新 Logo 全套压缩包：执行打包脚本后生成于 `deliverables/fenghui-cloud-logo-kit.zip`（本地交付文件，不提交 Git）
-- [Cloudrave 可直接使用的新版资源](logo/cloudrave/)
-- [Logo 总览图](logo/preview/brand-overview.png)
-- [浏览器预览页](logo/preview/preview.html)
-- [Logo 使用说明](logo/README.md)
-- [宣传海报原图](poster/fenghui-cloud-poster.png)
+<p align="center">
+  <a href="#preview">视觉预览</a>&nbsp; · &nbsp;
+  <a href="#cloudrave">Cloudrave 资源</a>&nbsp; · &nbsp;
+  <a href="#assets">素材索引</a>&nbsp; · &nbsp;
+  <a href="#build">构建与打包</a>&nbsp; · &nbsp;
+  <a href="https://github.com/HuiDevCom/pan-icon/archive/refs/heads/main.zip">下载项目</a>
+</p>
 
-## 目录
+---
 
-```text
-assets/originals/   原始 Cloudrave 素材与 miku.svg
-cloudrave/          用户保留的原件
-logo/               常用站点 Logo、favicon 和 manifest
-  cloudrave/        按原件文件名配齐的新版资源，可用于替换
-  icons/            完整角色、简化角色、单色图标与辅助尺寸
-  variants/         竖版 Logo、单色 Logo 与纯文字标志
-  png/              各种尺寸及 1× / 2× 透明 PNG
-  preview/          总览、对照图与 HTML 预览页
-  source/           原始素材副本、字形轮廓、生成与打包脚本
-poster/             海报成品与生成提示词
-deliverables/       最新可交付压缩包
-archive/            整理前根目录中的旧压缩包
+<a id="preview"></a>
+
+## 视觉预览
+
+![风绘云盘品牌总览：横版、深色背景效果、图标、竖版、单色版与品牌配色](logo/preview/brand-overview.png)
+
+<p align="center">
+  <a href="logo/preview/brand-preview.svg">矢量总览</a>&nbsp; · &nbsp;
+  <a href="logo/preview/logo-comparison.png">横版对照</a>&nbsp; · &nbsp;
+  <a href="logo/README.md">完整使用说明</a>
+</p>
+
+<a id="cloudrave"></a>
+
+## 直接用于 Cloudrave
+
+**[打开新版替换资源 →](logo/cloudrave/)**
+
+五个文件沿用原件命名，方便按实际部署路径对应替换。
+
+| 文件 | 格式与尺寸 | 用途 |
+| :--- | :--- | :--- |
+| [logo.svg](logo/cloudrave/logo.svg) | SVG · 透明背景 | 浅色背景使用，深色文字 |
+| [logo_light.svg](logo/cloudrave/logo_light.svg) | SVG · 透明背景 | 深色背景使用，浅色文字 |
+| [logo192.png](logo/cloudrave/logo192.png) | PNG · 192 × 192 | 完整角色图标 |
+| [logo512.png](logo/cloudrave/logo512.png) | PNG · 512 × 512 | 高清完整角色图标 |
+| [favicon.ico](logo/cloudrave/favicon.ico) | ICO · 16–256 px | 浏览器标签页简化图标 |
+
+> 新版资源位于 **`logo/cloudrave/`**。根目录的 `cloudrave/` 保留原件，供核对与还原使用。
+
+<a id="assets"></a>
+
+## 素材索引
+
+| 想要使用 | 资源入口 | 说明 |
+| :--- | :--- | :--- |
+| 横版 Logo | [深色文字](logo/logo.svg) · [浅色文字](logo/logo_light.svg) | 两套透明底版本，共用同一枚彩色图标 |
+| 竖版与单色 Logo | [variants/](logo/variants/) | 竖版、纯文字与单色印刷版本 |
+| 角色与网站图标 | [icons/](logo/icons/) · [favicon.svg](logo/favicon.svg) | 完整角色、简化玩偶、Apple Touch 图标 |
+| PNG 导出 | [png/](logo/png/) | 多尺寸图标、Logo 的 1× / 2× 导出 |
+| 宣传海报 | [海报原图](poster/fenghui-cloud-poster.png) · [生成提示词](poster/generation-prompt.txt) | 1024 × 1536 竖版海报 |
+| README 动态封面 | [readme-cover.svg](assets/readme-cover.svg) | 角色浮动与每 6 秒一次的眨眼动画 |
+| 原始素材 | [originals/](assets/originals/) | 原始 Cloudrave 资源与 miku.svg |
+
+<details>
+<summary><strong>展开宣传海报预览</strong></summary>
+
+<p align="center">
+  <a href="poster/fenghui-cloud-poster.png">
+    <img src="poster/fenghui-cloud-poster.png" width="360" alt="风绘云盘竖版宣传海报" />
+  </a>
+</p>
+
+</details>
+
+<a id="build"></a>
+
+## 构建与打包
+
+需要 **Node.js ≥ 20.9.0** 和 **Python 3**。在项目根目录依次执行：
+
+```bash
+npm ci
+npm run build
+npm run package
 ```
 
-## 直接使用
+| 步骤 | 结果 |
+| :--- | :--- |
+| `npm ci` | 安装锁定版本的 Sharp 依赖 |
+| `npm run build` | 生成 Logo、图标、预览图和 README 动态封面 |
+| `npm run package` | 同步五个 Cloudrave 替换文件，并生成全套 ZIP |
 
-`logo/cloudrave/` 包含新版 `logo.svg`、`logo_light.svg`、`logo192.png`、`logo512.png`、`favicon.ico`，与根目录原件 `cloudrave/` 的文件名和类型一致，可用于对应替换。全套压缩包内也包含此文件夹。运行打包脚本会同步这五个文件。
+交付包生成于 `deliverables/fenghui-cloud-logo-kit.zip`。该目录不提交 Git；下载项目后可以本地重建。
 
-`logo/logo.svg` 为深色文字版，`logo/logo_light.svg` 为浅色文字版，两者均为透明背景。常用 `logo192.png`、`logo512.png`、`favicon.svg`、`favicon.ico` 与 `site.webmanifest` 保留在 `logo/` 根目录，方便配置站点。
+打包命令需要可用的 `python` 命令，也可以直接用 Python 3 执行 `logo/source/package.py`。修改中文字形时才需要运行 Windows 下的 `build-wordmark.ps1`；日常构建直接使用已有字形轮廓。
 
-彩色图标共用一套，不区分深浅色。完整角色坐于云层中部，略向左微调；简化玩偶居中，底部不保留云朵。完整角色版与简化版分别保存在 `logo/icons/`。
+<details>
+<summary><strong>项目结构</strong></summary>
 
-构建需要 Node.js（版本要求见 `package.json`）及 Python 3。克隆项目后运行 `npm ci` 安装已锁定的依赖，再运行 `npm run build` 生成素材，运行 `npm run package` 同步 Cloudrave 替换文件并打包。打包命令需要系统中可用的 `python` 命令；也可以直接用 Python 3 执行 `logo/source/package.py`。
+```text
+pan icon/
+├─ assets/
+│  ├─ originals/       原始素材
+│  └─ readme-cover.svg 动态封面
+├─ cloudrave/          原件副本
+├─ logo/
+│  ├─ cloudrave/       可直接使用的新版资源
+│  ├─ icons/           完整角色、简化与单色图标
+│  ├─ variants/        竖版、单色与纯文字 Logo
+│  ├─ png/             多尺寸透明 PNG
+│  ├─ preview/         总览、对照图与 HTML 预览页
+│  └─ source/          生成脚本、字形与源数据
+├─ poster/             海报与生成提示词
+├─ deliverables/       本地生成的交付包
+└─ archive/            本地历史归档
+```
 
-`assets/originals/` 保留用户提供的原始素材，内容未改动。`archive/` 仅供历史留存，交付使用 `deliverables/` 中的版本。
+</details>
 
-## pan icon 副本与版本管理
+<details>
+<summary><strong>设计与维护说明</strong></summary>
 
-当前目录 `pan icon` 是风绘云盘品牌素材的独立工作副本。目录已按原始素材、Logo、海报、最新交付包和历史归档分类；新版站点替换资源使用 `logo/cloudrave/`，根目录的 `cloudrave/` 保留原件。
+- 中文名称使用矢量轮廓；实际 Logo 的 SVG 与 PNG 均为透明背景。
+- 彩色图标共用一套，Logo 通过文字颜色适配深浅背景；另保留单色印刷版本。
+- 完整角色坐于云层中部并略向左调整，简化玩偶居中且不保留底部云朵。
+- 动态封面为直角矩形，使用自包含 SVG 与 CSS 动画，支持减少动态效果设置，无外部图片或脚本依赖。
+- HTML 尺寸预览页位于 `logo/preview/preview.html`，下载项目后在浏览器本地打开。
+- 协作约定见 [AGENTS.md](AGENTS.md)，忽略规则见 [.gitignore](.gitignore)。源素材与成品保留在版本管理中，交付包、历史归档、依赖和缓存保留在本地。
 
-- [代理协作规范](AGENTS.md)：项目结构、设计约束、重建与交付检查。
-- [.gitignore](.gitignore)：排除交付压缩包、历史归档、缓存、依赖、日志和本地环境文件。
+</details>
 
-源素材、SVG、PNG、ICO、海报、提示词和脚本保留在版本管理范围内。`deliverables/` 与 `archive/` 即使不提交 Git，本地文件仍然保留。忽略规则只对未跟踪文件生效；已经被 Git 跟踪的文件需要另行处理。
+---
 
-交付包可从版本管理中的源文件重新生成。构建依赖记录在 `package.json` 和 `package-lock.json` 中，本地依赖目录不提交 Git。
+<p align="center">
+  <sub>风绘云盘 · 品牌素材与视觉资源</sub><br />
+  <a href="https://github.com/HuiDevCom/pan-icon">仓库首页</a>&nbsp; · &nbsp;
+  <a href="logo/README.md">使用说明</a>&nbsp; · &nbsp;
+  <a href="#preview">返回预览 ↑</a>
+</p>
