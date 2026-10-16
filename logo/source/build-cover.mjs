@@ -8,12 +8,19 @@ const load=name=>JSON.parse(fs.readFileSync(path.join(source,name),'utf8').repla
 const word=load('wordmark-path.json');
 const subtitle=load('cover-typography.json');
 const icon=fs.readFileSync(path.join(project,'logo/icons/icon.svg'),'utf8');
-const iconContent=icon.replace(/^<svg[^>]*>/,'').replace(/<\/svg>\s*$/,'');
+// Animate only the embedded cover eyes; the exported brand icons stay static.
+const openEyeMarker='<g id="eyes">';
+const frontHairMarker='<g id="front-hair-details"';
+if(!icon.includes(openEyeMarker)||!icon.includes(frontHairMarker))throw new Error('Mascot eye groups were not found.');
+const closedEyes='<g id="cover-closed-eyes" class="cover-closed-eyes" fill="none" stroke="#0c142d" stroke-width="13" stroke-linecap="round"><path d="M487 550Q547 581 609 548M746 549Q818 582 887 551"/></g>';
+const iconContent=icon.replace(/^<svg[^>]*>/,'').replace(/<\/svg>\s*$/,'')
+ .replace(openEyeMarker,'<g id="eyes" class="cover-open-eyes">')
+ .replace(frontHairMarker,closedEyes+frontHairMarker);
 const outline=(data,x,y,width,color)=>`<g transform="translate(${x} ${y}) scale(${width/data.bounds.width}) translate(${-data.bounds.x} ${-data.bounds.y})"><path d="${data.path}" fill="${color}" fill-rule="evenodd"/></g>`;
 
 const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="480" viewBox="0 0 1280 480" fill="none" role="img" aria-labelledby="cover-title cover-desc">
 <title id="cover-title">风绘云盘 · 动态品牌封面</title>
-<desc id="cover-desc">青绿色品牌封面，右侧双马尾角色轻轻浮动，云层与文件卡片缓慢移动。中文名称与副标题均为矢量轮廓，无外部资源或脚本。</desc>
+<desc id="cover-desc">青绿色品牌封面，右侧双马尾角色轻轻浮动并自然眨眼，云层与文件卡片缓慢移动。中文名称与副标题均为矢量轮廓，无外部资源或脚本。</desc>
 <defs>
  <linearGradient id="cover-bg" x1="0" y1="0" x2="1280" y2="480" gradientUnits="userSpaceOnUse"><stop stop-color="#F5FCFC"/><stop offset=".55" stop-color="#EAF8F8"/><stop offset="1" stop-color="#C8EBED"/></linearGradient>
  <radialGradient id="cover-glow"><stop stop-color="white" stop-opacity=".95"/><stop offset="1" stop-color="white" stop-opacity="0"/></radialGradient>
@@ -24,18 +31,22 @@ const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="480" vie
 </defs>
 <style>
  .cover-bob{animation:cover-bob 7s ease-in-out infinite}
+ .cover-open-eyes{transform-box:fill-box;transform-origin:50% 60%;animation:cover-blink-open 6s ease-in-out infinite}
+ .cover-closed-eyes{opacity:0;animation:cover-blink-closed 6s ease-in-out infinite}
  .cover-card-a{animation:cover-card-a 9s ease-in-out infinite}
  .cover-card-b{animation:cover-card-b 11s ease-in-out infinite}
  .cover-cloud{animation:cover-cloud 13s ease-in-out infinite}
  .cover-orbit{animation:cover-orbit 32s linear infinite}
  .cover-pulse{animation:cover-pulse 5s ease-in-out infinite}
+ @keyframes cover-blink-open{0%,42%,47%,100%{transform:scaleY(1);opacity:1}44.5%,45%{transform:scaleY(.03);opacity:0}}
+ @keyframes cover-blink-closed{0%,43.2%,46.3%,100%{opacity:0}44.5%,45%{opacity:1}}
  @keyframes cover-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
  @keyframes cover-card-a{0%,100%{transform:translateY(0)}50%{transform:translateY(12px)}}
  @keyframes cover-card-b{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
  @keyframes cover-cloud{0%,100%{transform:translateX(0)}50%{transform:translateX(14px)}}
  @keyframes cover-orbit{to{stroke-dashoffset:-104}}
  @keyframes cover-pulse{0%,100%{opacity:.45}50%{opacity:1}}
- @media(prefers-reduced-motion:reduce){.cover-bob,.cover-card-a,.cover-card-b,.cover-cloud,.cover-orbit,.cover-pulse{animation:none}}
+ @media(prefers-reduced-motion:reduce){.cover-bob,.cover-card-a,.cover-card-b,.cover-cloud,.cover-orbit,.cover-pulse,.cover-open-eyes,.cover-closed-eyes{animation:none}}
 </style>
 <g clip-path="url(#cover-bound)">
  <rect width="1280" height="480" fill="url(#cover-bg)"/>

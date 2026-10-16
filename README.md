@@ -2,7 +2,7 @@
 
 # 风绘云盘 · 品牌素材工作区
 
-封面源文件为 `assets/readme-cover.svg`，使用自包含 SVG 和 CSS 动画，外框为直角矩形，支持减少动态效果设置。运行 `npm run build` 会一并更新封面；不需要外部图片服务。
+封面源文件为 `assets/readme-cover.svg`，使用自包含 SVG 和 CSS 动画，角色每 6 秒自然眨眼一次，外框为直角矩形，支持减少动态效果设置。运行 `npm run build` 会一并更新封面；不需要外部图片服务。
 
 ## 常用入口
 
