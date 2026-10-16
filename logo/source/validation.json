@@ -1,0 +1,69 @@
+{
+  "svg_files": 13,
+  "png_files": 38,
+  "ico_sizes": [
+    [
+      16,
+      16
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      48,
+      48
+    ],
+    [
+      64,
+      64
+    ],
+    [
+      128,
+      128
+    ],
+    [
+      256,
+      256
+    ]
+  ],
+  "svg_parsing": "passed",
+  "png_decoding": "passed",
+  "chinese_wordmark": "outlined paths",
+  "source_integrity": "passed",
+  "transparent_icon_corners": "passed",
+  "main_composition": {
+    "character_viewport": [
+      97,
+      115,
+      330,
+      302
+    ],
+    "alignment": "seated character moved 8 pixels left"
+  },
+  "compact_composition": {
+    "doll_translation": [
+      0,
+      -28
+    ],
+    "bottom_cloud": "removed",
+    "alignment": "centered in circular background"
+  },
+  "theme_variants": "Shared color icon; dark and light text logos",
+  "horizontal_logo_background": "transparent SVG and RGBA PNG; transparent previews",
+  "overview_second_logo": {
+    "translation": [
+      178,
+      70
+    ],
+    "scale": 0.54,
+    "bottom_clearance_pixels": 31.52
+  },
+  "workspace_organization": {
+    "preview_links": "passed",
+    "workspace_readme_links": "passed",
+    "original_hashes": "passed",
+    "transparent_logos": "passed",
+    "delivery_directory": "../../deliverables"
+  }
+}

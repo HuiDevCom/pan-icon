@@ -1,0 +1,18 @@
+Tool: built-in image_gen.imagegen
+Reference 1: ../logo/logo512.png
+Reference 2: ../logo/png/logo.png
+Output: fenghui-cloud-poster.png
+
+Use case: ads-marketing
+Asset type: finished portrait promotional poster for the Chinese cloud storage brand 风绘云盘, 2:3 aspect ratio, high resolution.
+Primary request: Make one beautiful, professional, illustration-led brand launch poster based on the supplied existing brand artwork, with flawless Chinese typography. This is a finished poster, edge-to-edge artwork, not a photograph of a poster or a mockup.
+Input images: Image 1 is the brand mascot identity reference: a chibi seated turquoise twin-tail girl holding a phone, huge glossy teal eyes, tiny mouth, pink hair clips, gray outfit, dark navy outlines. Image 2 is the actual existing logo and exact Chinese brand name reference. Preserve this character's proportions, clothing, face, bangs, twin tails, phone and colors faithfully. Reuse the recognizable existing logo in a compact unobtrusive masthead; do not redesign the logo.
+Composition: generous editorial top typography area, a single oversized seated reference mascot centered in the middle-lower part, sitting naturally on a sculpted soft white cloud, with long twin tails hanging symmetrically. Surround her with only a few sophisticated floating translucent document and folder shapes which subtly communicate cloud file storage. Use a large circular turquoise portal/sun behind the mascot, echoing the existing icon's concentric shapes. Strong hierarchy, clean aligned typesetting, generous negative space, polished art direction. Small footer typography with three simple corresponding line symbols for storage, organization, sharing.
+Style: premium modern Chinese internet brand advertising, charming anime character with clean vector-like outlines, dimensional softly lit clouds and subtle translucent material, mostly clean flat pastel fields, restrained depth, gentle atmospheric teal gradients. No photographic people. No busy sci-fi circuitry. Maintain the recognizable illustrated reference mascot rather than generic anime.
+Color palette: mist teal #D5EFF1 and ivory, turquoise #198DA6, muted character hair #8CC9CA, dark navy #163849 type, tiny pink accents #EE8CA9. Beautiful pale cyan background for this poster. Gentle airy daylight.
+Exact text, render these Chinese phrases legibly and accurately with professional typesetting, no additional slogans:
+Masthead brand name: "风绘云盘"
+Main headline (two lines): "文件存储" / "管理与分享"
+Small supporting line: "让文件有序，让分享轻松"
+Footer feature line: "云端存储  ·  文件管理  ·  便捷分享"
+Constraints: One mascot only. The four characters 风绘云盘 must be correct. Crisp beautiful Chinese sans-serif typography, no typos, no fake Chinese characters. No URL, QR code, price, storage capacity, uptime or security claims, third-party branding, watermark, random English copy, browser frame, or device mockup. Do not add a rectangular background behind the small logo itself; keep it naturally integrated into the poster.

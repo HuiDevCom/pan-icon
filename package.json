@@ -1,0 +1,17 @@
+{
+  "name": "pan-icon",
+  "version": "1.0.0",
+  "private": true,
+  "description": "风绘云盘品牌标志、站点图标与宣传素材",
+  "type": "module",
+  "scripts": {
+    "build": "node logo/source/build.mjs",
+    "package": "python logo/source/package.py"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "devDependencies": {
+    "sharp": "0.35.5"
+  }
+}

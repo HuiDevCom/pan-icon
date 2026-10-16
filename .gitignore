@@ -1,0 +1,47 @@
+# 可重新生成的交付包、历史归档
+/deliverables/
+/archive/
+*.zip
+*.7z
+*.rar
+
+# 依赖与运行缓存
+node_modules/
+.pnpm-store/
+.npm/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# 临时文件和日志
+/tmp/
+/temp/
+*.tmp
+*.temp
+*.log
+*.bak
+*.swp
+*.swo
+*~
+
+# 本地环境与凭据（示例配置可以提交）
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+*.local
+
+# 操作系统与编辑器本地状态
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+
+# 不忽略 SVG、PNG、ICO、原始素材、海报、提示词与生成脚本。
