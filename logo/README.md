@@ -17,7 +17,7 @@
 | `icons/icon.svg` | 完整角色圆形图标，512 × 512 |
 | `icons/icon-compact.svg` / `favicon.svg` | 居中的简化小玩偶，无底部云朵，512 × 512，可任意缩放 |
 | `icons/icon-compact.png` | 简化小玩偶图标的透明 PNG，512 × 512 |
-| `logo192.png` / `logo512.png` | 192 / 512 像素完整角色图标 |
+| `logo100.png` / `logo192.png` / `logo512.png` | 100 / 192 / 512 像素完整角色主图标 |
 | `favicon.ico` | 内含 16 / 32 / 48 / 64 / 128 / 256 像素的小尺寸图标 |
 | `icons/favicon-16x16.png` / `icons/favicon-32x32.png` | PNG 格式 favicon |
 | `icons/apple-touch-icon.png` | 180 × 180，透明背景；系统可自动补背景 |
@@ -36,7 +36,7 @@
 
 - 网站页头：浅色背景用 `logo.svg`，深色背景用 `logo_light.svg`。保持原始宽高比，建议显示高度不低于 40 px。
 - 标签页：优先使用 `favicon.svg`，并以 `favicon.ico` 或 PNG 兼容其他浏览器。
-- 头像与应用图标：128 px 及以上使用完整角色版，低于 128 px 使用简化版。`png/` 中各尺寸已按此规则导出。
+- 头像与应用图标：100 px 主图标与 128 px 及以上尺寸使用完整角色版，其余低于 128 px 的尺寸使用简化版。`png/` 中各尺寸已按此规则导出。
 - 竖版：建议显示宽度不低于 160 px。标志周围保留至少圆形图标直径 1/8 的留白。
 - 单色版：用于印章、单色印刷与纯色展示。白色单色文件需置于深色背景。
 
@@ -80,3 +80,7 @@ node .\logo\source\build.mjs
 ```
 
 重建后运行 `python .\logo\source\package.py`，更新 `deliverables/` 中的交付包。
+
+## 许可与来源
+
+本项目中发布者有权许可的原创贡献采用 [CC BY-NC-SA 4.0](../LICENSE)。第三方角色、原始标志、字体软件及商标权仍由原权利人保留；范围与署名说明见 [NOTICE.md](../NOTICE.md)。交付压缩包会附带许可证与说明。

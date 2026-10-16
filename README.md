@@ -63,7 +63,7 @@
 | 横版 Logo | [深色文字](logo/logo.svg) · [浅色文字](logo/logo_light.svg) | 两套透明底版本，共用同一枚彩色图标 |
 | 竖版与单色 Logo | [variants/](logo/variants/) | 竖版、纯文字与单色印刷版本 |
 | 角色与网站图标 | [icons/](logo/icons/) · [favicon.svg](logo/favicon.svg) | 完整角色、简化玩偶、Apple Touch 图标 |
-| PNG 导出 | [png/](logo/png/) | 多尺寸图标、Logo 的 1× / 2× 导出 |
+| PNG 导出 | [100 px 主图标](logo/logo100.png) · [全部 PNG](logo/png/) | 多尺寸图标、Logo 的 1× / 2× 导出 |
 | 宣传海报 | [海报原图](poster/fenghui-cloud-poster.png) · [生成提示词](poster/generation-prompt.txt) | 1024 × 1536 竖版海报 |
 | README 动态封面 | [readme-cover.svg](assets/readme-cover.svg) | 角色浮动与每 6 秒一次的眨眼动画 |
 | 原始素材 | [originals/](assets/originals/) | 原始 Cloudrave 资源与 miku.svg |
@@ -136,11 +136,20 @@ pan icon/
 
 </details>
 
+<a id="license"></a>
+
+## 许可证
+
+本项目中发布者有权许可的原创贡献采用 **[CC BY-NC-SA 4.0](LICENSE)**：署名、非商业性使用、相同方式共享。
+
+第三方角色、原始标志、字体软件及商标权不包含在该授权中，具体范围与署名示例见 **[素材来源与授权说明](NOTICE.md)**。全套 ZIP 会同时附带这两份文件。
+
 ---
 
 <p align="center">
   <sub>风绘云盘 · 品牌素材与视觉资源</sub><br />
   <a href="https://github.com/HuiDevCom/pan-icon">仓库首页</a>&nbsp; · &nbsp;
   <a href="logo/README.md">使用说明</a>&nbsp; · &nbsp;
+  <a href="#license">许可证</a>&nbsp; · &nbsp;
   <a href="#preview">返回预览 ↑</a>
 </p>

@@ -1,6 +1,6 @@
 {
-  "svg_files": 13,
-  "png_files": 38,
+  "svg_files": 15,
+  "png_files": 42,
   "ico_sizes": [
     [
       16,
@@ -65,5 +65,20 @@
     "original_hashes": "passed",
     "transparent_logos": "passed",
     "delivery_directory": "../../deliverables"
+  },
+  "file_count_scope": {
+    "png": "logo/**",
+    "svg": "logo/** excluding source/"
+  },
+  "main_icon_sizes": [
+    100,
+    192,
+    512
+  ],
+  "main_icon_100": "full character; 100x100 RGBA; transparent corners verified",
+  "licensing": {
+    "identifier": "CC-BY-NC-SA-4.0",
+    "scope_notice": "NOTICE.md",
+    "legal_files_in_archive": "verified"
   }
 }
