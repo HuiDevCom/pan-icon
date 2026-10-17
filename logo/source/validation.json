@@ -80,5 +80,121 @@
     "identifier": "CC-BY-NC-SA-4.0",
     "scope_notice": "NOTICE.md",
     "legal_files_in_archive": "verified"
+  },
+  "png_2x_exports": {
+    "status": "passed",
+    "pairs": [
+      {
+        "file": "png/icon-mono-white@2x.png",
+        "normal_size": [
+          512,
+          512
+        ],
+        "double_size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "file": "png/icon-mono@2x.png",
+        "normal_size": [
+          512,
+          512
+        ],
+        "double_size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "file": "png/logo-mono@2x.png",
+        "normal_size": [
+          1060,
+          320
+        ],
+        "double_size": [
+          2120,
+          640
+        ]
+      },
+      {
+        "file": "png/logo-stacked-light@2x.png",
+        "normal_size": [
+          800,
+          880
+        ],
+        "double_size": [
+          1600,
+          1760
+        ]
+      },
+      {
+        "file": "png/logo-stacked@2x.png",
+        "normal_size": [
+          800,
+          880
+        ],
+        "double_size": [
+          1600,
+          1760
+        ]
+      },
+      {
+        "file": "png/logo@2x.png",
+        "normal_size": [
+          1060,
+          320
+        ],
+        "double_size": [
+          2120,
+          640
+        ]
+      },
+      {
+        "file": "png/logo_light@2x.png",
+        "normal_size": [
+          1060,
+          320
+        ],
+        "double_size": [
+          2120,
+          640
+        ]
+      },
+      {
+        "file": "png/wordmark-light@2x.png",
+        "normal_size": [
+          660,
+          164
+        ],
+        "double_size": [
+          1320,
+          328
+        ]
+      },
+      {
+        "file": "png/wordmark@2x.png",
+        "normal_size": [
+          660,
+          164
+        ],
+        "double_size": [
+          1320,
+          328
+        ]
+      }
+    ]
+  },
+  "standalone_archive_rebuild": {
+    "root_files": [
+      "LICENSE",
+      "NOTICE.md",
+      "package.json",
+      "package-lock.json"
+    ],
+    "npm_ci": "passed",
+    "npm_run_build": "passed",
+    "npm_run_package": "passed",
+    "borrowed_project_dependencies": false
   }
 }

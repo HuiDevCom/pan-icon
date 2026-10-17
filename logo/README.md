@@ -73,7 +73,7 @@
 
 `source/wordmark-path.json` 保存“风绘云盘”的字形轮廓；来自本机微软雅黑粗体，已转为路径。`source/build-wordmark.ps1` 可在有该字体的 Windows 环境重新提取。
 
-`source/build.mjs` 使用 Node.js 与 Sharp 生成资源。先在项目根目录运行 `npm ci` 安装锁定的依赖，再执行以下重建命令：
+`source/build.mjs` 使用 Node.js 与 Sharp 生成资源。交付 ZIP 的根目录包含 `package.json` 和 `package-lock.json`。先在项目根目录或 ZIP 解压根目录运行 `npm ci` 安装锁定的依赖，再执行以下重建命令：
 
 ```powershell
 node .\logo\source\build.mjs

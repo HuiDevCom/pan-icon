@@ -8,10 +8,10 @@ cloudrave = logo / "cloudrave"
 cloudrave.mkdir(exist_ok=True)
 for name in ["logo.svg", "logo_light.svg", "logo192.png", "logo512.png", "favicon.ico"]:
     copy2(logo / name, cloudrave / name)
-legal_files = [logo.parent / name for name in ("LICENSE", "NOTICE.md")]
-for legal in legal_files:
-    if not legal.is_file():
-        raise FileNotFoundError(f"Missing required license notice: {legal.name}")
+root_files = [logo.parent / name for name in ("LICENSE", "NOTICE.md", "package.json", "package-lock.json")]
+for item in root_files:
+    if not item.is_file():
+        raise FileNotFoundError(f"Missing required package file: {item.name}")
 destination = logo.parent / "deliverables" / "fenghui-cloud-logo-kit.zip"
 destination.parent.mkdir(parents=True, exist_ok=True)
 files = sorted(
@@ -21,10 +21,10 @@ files = sorted(
 with ZipFile(destination, "w", ZIP_DEFLATED) as archive:
     for item in files:
         archive.write(item, Path("logo") / item.relative_to(logo))
-    for legal in legal_files:
-        archive.write(legal, legal.name)
+    for item in root_files:
+        archive.write(item, item.name)
 with ZipFile(destination) as archive:
     damaged = archive.testzip()
     if damaged is not None:
         raise RuntimeError(f"Invalid archive member: {damaged}")
-print(f"Packaged {len(files)+len(legal_files)} files: {destination}")
+print(f"Packaged {len(files)+len(root_files)} files: {destination}")

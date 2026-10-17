@@ -58,7 +58,8 @@ write('icon-mono-white.svg',shell(512,512,`<g color="#FFFFFF">${monoFinal}</g>`)
 write('logo-mono.svg',shell(1060,320,`<g transform="translate(8 8) scale(.59375)" color="#163849">${monoFinal}</g><g transform="translate(374 ${160-wmHeight/2})">${word('#163849')}</g>`));
 for(const n of ['logo','logo_light','logo-stacked','logo-stacked-light','wordmark','wordmark-light','icon-mono','icon-mono-white','logo-mono']){
  const input=asset(n+'.svg');
- await sharp(input,{density:192}).png().toFile(asset('png',n+'@2x.png'));
+ const {width,height}=await sharp(input).metadata();
+ await sharp(input,{density:144}).resize(width*2,height*2,{fit:'fill'}).png().toFile(asset('png',n+'@2x.png'));
  await sharp(input).png().toFile(asset('png',n+'.png'));
 }
 // Theme variants belong to the wordmark; the color icon stays the same in both.

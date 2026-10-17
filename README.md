@@ -97,7 +97,7 @@ npm run package
 | `npm run build` | 生成 Logo、图标、预览图和 README 动态封面 |
 | `npm run package` | 同步五个 Cloudrave 替换文件，并生成全套 ZIP |
 
-交付包生成于 `deliverables/fenghui-cloud-logo-kit.zip`。该目录不提交 Git；下载项目后可以本地重建。
+交付包生成于 `deliverables/fenghui-cloud-logo-kit.zip`。该目录不提交 Git。ZIP 同时包含 `package.json` 与 `package-lock.json`，解压后也可以在解压根目录执行上述命令，安装锁定依赖并重建。
 
 打包命令需要可用的 `python` 命令，也可以直接用 Python 3 执行 `logo/source/package.py`。修改中文字形时才需要运行 Windows 下的 `build-wordmark.ps1`；日常构建直接使用已有字形轮廓。
 
